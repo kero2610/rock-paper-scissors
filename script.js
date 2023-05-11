@@ -49,75 +49,89 @@ function getComputerChoice() {
     }
 }
 
+// Play a round of Rock, Paper, Scissors
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt('Rock/Paper/Scissors : ', '');
+    playerSelection = prompt('Rock/Paper/Scissors: ', '');
     computerSelection = getComputerChoice();
-    console.log('player: ' + playerSelection, ' vs computer :' + computerSelection);
+    console.log('Player:' + playerSelection, ' vs Computer:' + computerSelection);
 
     // playerSelection = Rock
     if (playerSelection.toLowerCase() === 'rock' && computerSelection.toLowerCase() === 'rock') {
-        return 'A tie';
+        console.log('A tie!');
+        return 'tie';
     }
     else if (playerSelection.toLowerCase() === 'rock' && computerSelection.toLowerCase() === 'paper') {
-        return 'You lose!';
+        console.log('You Lose! Paper beats Rock');
+        return 'lose';
     }
     else if (playerSelection.toLowerCase() === 'rock' && computerSelection.toLowerCase() === 'scissors') {
-        return 'You win!';
+        console.log('You Win! Rock beats Scissors');
+        return 'win';
     }
 
     // playerSelection = Paper
     else if (playerSelection.toLowerCase() === 'paper' && computerSelection.toLowerCase() === 'rock') {
-        return 'You win!';
+        console.log('You Win! Paper beats Rock');
+        return 'win!';
     }
     else if (playerSelection.toLowerCase() === 'paper' && computerSelection.toLowerCase() === 'paper') {
-        return 'A tie';
+        console.log('A tie!');
+        return 'tie';
     }
     else if (playerSelection.toLowerCase() === 'paper' && computerSelection.toLowerCase() === 'scissors') {
-        return 'You lose!';
+        console.log('You Lose! Scissors beats Paper');
+        return 'lose';
     }
 
     // playerSelection = Scissors
     else if (playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'rock') {
-        return 'You lose!';
+        console.log('You Lose! Rock beats Scissors');
+        return 'lose';
     }
     else if (playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'paper') {
-        return 'You win!';
+        console.log('You Win! Scissors beats Paper');
+        return 'win';
     }
     else if (playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'scissors') {
-        return 'A tie';
+        console.log('A tie!');
+        return 'tie';
+    }
+    else {
+        console.log('Wrong input!');
     }
 }
 
+//Play 5 rounds of Rock, Paper, Scissors | Save scores | return Result
 function game() {
     let playerScore = 0;
     let computerScore = 0;
+    let result;
 
     for (let i = 1; i <= 5; i++) {
         console.log('Round ' + i);
         result = playRound(playerSelection, computerSelection);
-        console.log(result);
 
-        if (result === 'You win!') {
+        if (result === 'win') {
             playerScore++
-            console.log('Current score. Player: ' + playerScore + ' Computer: ' + computerScore);
+            console.log('Current score. Player:' + playerScore + ' Computer:' + computerScore);
         }
-        else if (result === 'You lose!') {
+        else if (result === 'lose') {
             computerScore++
-            console.log('Current score. Player: ' + playerScore + ' Computer: ' + computerScore);
+            console.log('Current score. Player: ' + playerScore + ' Computer:' + computerScore);
         }
-        else if (result === 'A tie') {
-            console.log('Current score. Player: ' + playerScore + ' Computer: ' + computerScore);
+        else if (result === 'tie') {
+            console.log('Current score. Player:' + playerScore + ' Computer:' + computerScore);
         }
     }
 
     if (playerScore > computerScore) {
-        return 'Congratulations! You win!';
+        return 'Congratulations! You Win!';
     }
     else if (playerScore < computerScore) {
-        return 'Aww You lose! Nice try though';
+        return 'Aww You Lose! Nice try though!';
     }
     else {
-        return "It's a tie!";
+        return "It's a Draw!";
     }
 
 }
