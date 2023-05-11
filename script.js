@@ -33,7 +33,7 @@ let computerSelection = '';
 
 console.log(game());
 
-// Generate random output Rock/Paper/Scissors
+// Generate random output Rock/Paper/Scissors | return Rock/Paper/Scissors
 function getComputerChoice() {
     // 0 = Rock, 1 = Paper, 2 = Scissors   
     let randomNum = Math.floor(Math.random() * 3);
@@ -49,7 +49,7 @@ function getComputerChoice() {
     }
 }
 
-// Play a round of Rock, Paper, Scissors
+// Play a round of Rock, Paper, Scissors | return result
 function playRound(playerSelection, computerSelection) {
     playerSelection = prompt('Rock/Paper/Scissors: ', '');
     computerSelection = getComputerChoice();
@@ -135,49 +135,3 @@ function game() {
     }
 
 }
-
-/*
-let userInput = parseInt(prompt('0 = Rock, 1 = Paper, 2 = Scissors : ', ''));
-let computerChoice = Math.floor(Math.random() * 3);
-// 0 = Rock, 1 = Paper, 2 = Scissors
-console.log(userInput);
-console.log(computerChoice);
-
-
-// userInput = 0(Rock)
-if (userInput === 0 && computerChoice === 0) {
-    console.log('A tie');
-}
-else if (userInput === 0 && computerChoice === 1) {
-    console.log('You lose!');
-}
-else if (userInput === 0 && computerChoice === 2) {
-    console.log('You win!');
-}
-
-//userInput = 1(Paper)
-else if (userInput === 1 && computerChoice === 0) {
-    console.log('You win!');
-}
-else if (userInput === 1 && computerChoice === 1) {
-    console.log('A tie');
-}
-else if (userInput === 1 && computerChoice === 2) {
-    console.log('You lose!');
-}
-
-//userInput = 2(Scissors)
-else if (userInput === 2 && computerChoice === 0) {
-    console.log('You lose!');
-}
-else if (userInput === 2 && computerChoice === 1) {
-    console.log('You win!');
-}
-else if (userInput === 2 && computerChoice === 2) {
-    console.log('A tie');
-}
-
-else {
-    console.log('Wrong input!');
-}*/
-
