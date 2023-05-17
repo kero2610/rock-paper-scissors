@@ -6,10 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </head>
 <body>
+    <h1 class="header">ROCK PAPER SCISSORS</h1>
+    <div class="container">
+        <h2 class="round"></h2>
+
+        <div class="game">
+            <div class="playerContainer">
+                <div>PLAYER</div>
+                <div class="imageContainer">
+                    <img src="image/player.png" alt="player icon">
+                </div>
+                <div class="selectionButton">
+                    <button data-button = 'rock' class="rock">Rock</button>
+                    <button data-button = 'paper' class="paper">Paper</button>
+                    <button data-button = 'scissors' class="scissors">Scissors</button>
+                </div>
+                <div class="score scorePlayer"></div>
+            </div>
+                
+            <div class="computerContainer">
+                <div>COMPUTER</div>
+                <div class="imageContainer">
+                    <img src="image/robot.png" alt="robot icon">
+                </div>
+                <div class="score scoreComputer"></div>
+            </div>
+        </div>
+
+        <div class="result"></div>
+    </div>
+    <div class="footer">The Odin Project 2023</div>
     
 </body>
 </html>

@@ -1,0 +1,116 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: wheat;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 30px;
+}
+
+div{
+    display: block;
+}
+
+.header{
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.round{
+    font-size: 40px;
+}
+
+.container{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    justify-content: center;
+    gap: 50px;
+}
+
+.playerContainer{
+    width: 500px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.computerContainer{
+    width: 500px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.imageContainer{
+    width: 100px;
+    height: 100px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.score{
+    width: 100px;
+    height: 50px;
+}
+
+.selectionButton{
+    width: 400px;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.score{
+    margin-top: auto;
+    padding: 20px;
+}
+
+.result{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.footer{
+    font-size: 15px;
+    position: fixed;
+    bottom: 0;
+}
+
